@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Office Layout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="toolbar">
+      <div class="font-option">
+        <label for="fontSelect">Font: </label>
+        <select id="fontSelect" onchange="changeFont()">
+          <option value="Arial">Arial</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Courier New">Courier New</option>
+        </select>
+      </div>
+      <div class="font-style">
+        <button onclick="toggleBold()" title="Bold"><b>B</b></button>
+        <button onclick="toggleItalic()" title="Italic"><i>I</i></button>
+      </div>
+      <div class="background-color">
+        <label for="bgColor">Background Color: </label>
+        <input type="color" id="bgColor" onchange="changeBgColor()" />
+      </div>
+      <div class="alignment">
+        <button onclick="alignText('left')" title="Align Left">Left</button>
+        <button onclick="alignText('center')" title="Align Center">
+          Center
+        </button>
+        <button onclick="alignText('right')" title="Align Right">Right</button>
+      </div>
+    </div>
+    <div class="editor" contenteditable="true">
+      <p id="textChange">Write here...</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
