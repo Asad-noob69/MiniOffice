@@ -18,8 +18,8 @@ function toggleItalic(){
 
 function changeBgColor(){
     const color = document.getElementById('bgColor').value;
-const editor = document.querySelector('editor');
-    editor.style.backgroundColor = bgColor;
+const editor = document.querySelector('.editor');
+    editor.style.backgroundColor = color;
 }
 
 
